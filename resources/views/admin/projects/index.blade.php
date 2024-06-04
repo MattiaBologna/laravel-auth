@@ -9,6 +9,9 @@
         <h2>Projects</h2>
     </div>
     <div class="container">
+        <a href="{{route('admin.projects.create')}}" class="btn btn-primary">Add a new Project</a>
+    </div>
+    <div class="container">
         <table class="table">
             <thead>
                 <tr>
