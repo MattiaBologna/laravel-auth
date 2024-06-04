@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Projects')
+
 @section('content')
 
 <section>
@@ -20,8 +22,8 @@
                 @foreach ($projects as $project)
                     <tr>
                         <td>{{$project->id}}</td>
-                        <td>{{$project->title}}</td>
-                        <td><a href="{{$project->link}}" target='_blank'>Link</a></td>
+                        <td><a href="{{route('admin.projects.show', $project)}}">{{$project->title}}</a></td>
+                        <td><a href="{{$project->link}}" target='_blank'>Github link</a></td>
                         <td>{{$project->slug}}</td>
                     </tr>
                 @endforeach
